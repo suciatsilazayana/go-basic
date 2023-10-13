@@ -5,7 +5,7 @@ func main() {
 	gender := "male"
 	age := 17
 
-	// Penggunaan AND
+	// Penggunaan AND ..
 	if gender == "female" && age >= 21 {
 		println("Pelamar dapat dikerjakan")
 	} else {

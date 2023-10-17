@@ -15,6 +15,8 @@ type OrangTua struct {
 	Umur int
 }
 
+type DaftarSiswa []Siswa
+
 func main() {
 
 	// membuat variabel siswa 1
@@ -58,5 +60,24 @@ func main() {
 	fmt.Println("Informasi Siswa 3:")
 	fmt.Println("Nama: ", siswa3.Nama, ", Umur: ", siswa3.Umur, ", Kelas: ", siswa3.Kelas)
 	fmt.Println("Orang Tua:", siswa3.OrangTua.Nama, ", Umur: ", siswa3.OrangTua.Umur)
+
+	// variable daftarSiswa
+	var daftarSiswa DaftarSiswa
+
+	parent4 := OrangTua{"Rudi", 40}
+	parent5 := OrangTua{"Faisal", 38}
+	parent6 := OrangTua{"Hendro", 42}
+
+	var dftSiswa1 = Siswa{parent4, "Eva", 12, "6B"}
+	var dftSiswa2 = Siswa{parent5, "Faisal", 11, "5A"}
+	var dftSiswa3 = Siswa{parent6, "Hendro", 10, "4C"}
+
+	daftarSiswa = append(daftarSiswa, dftSiswa1)
+	daftarSiswa = append(daftarSiswa, dftSiswa2)
+	daftarSiswa = append(daftarSiswa, dftSiswa3)
+
+	fmt.Println("Daftar Siswa:")
+
+	fmt.Println(daftarSiswa)
 
 }

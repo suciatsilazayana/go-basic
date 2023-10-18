@@ -37,4 +37,10 @@ func main() {
 
 	}
 
+	fmt.Println("Daftar buah-buahan beserta jumlahnya:")
+	for key, value := range fruits {
+		fmt.Println(key, ":", value)
+
+	}
+
 }

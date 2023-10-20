@@ -19,6 +19,7 @@ func main() {
 		Name: "Suci",
 	}
 
+	fmt.Println("Nama awal student:", student.Name)
 	//memanggil method setmyname
 	student.setMyName("Noobee")
 

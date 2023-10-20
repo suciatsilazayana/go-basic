@@ -1,5 +1,19 @@
 package main
 
+import "fmt"
+
+type Car struct {
+	Name  string
+	Color string
+}
+
+func carInfo(car map[string]string) {
+	name := car.Name
+	color := car.color
+	text := fmt.Println("Mobil %s berwarna %s", name, color)
+	return text
+
+}
 func main() {
 	var car = map[string]string
 	car["name"] = "BWM"

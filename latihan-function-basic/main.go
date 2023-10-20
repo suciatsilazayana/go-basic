@@ -1,3 +1,5 @@
+package main
+
 func main() {
 	var car = map[string]string
 	car["name"] = "BWM"

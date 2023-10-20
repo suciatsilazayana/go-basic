@@ -1,35 +1,47 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type Car struct {
-	Name  string
-	Color string
+	data map[string]string
 }
 
-func carInfo(car map[string]string) {
-	name := car.Name
-	color := car.color
-	text := fmt.Println("Mobil %s berwarna %s", name, color)
+// cara pertama
+func carInfo(car map[string]string) string {
+	name := car["name"]
+	color := car["color"]
+	text := fmt.Sprintf("Mobil %s berwarna %s\n", name, color)
 	return text
-
 }
-func main() {
-	var car = map[string]string
-	car["name"] = "BWM"
+
+func tampilCar(message string) {
+	fmt.Println(message)
+}
+
+// cara kedua
+func carInfo1() string {
+	car := make(map[string]string)
+	car["name"] = "BMW"
 	car["color"] = "Black"
+	text := fmt.Sprintf("Mobil %s Berwarna %s\n", car["name"], car["color"])
+	return text
+}
 
-	// buat 2 buah fungsi :
-	// 1 => fungsi yang mengembalikan sebuah string
-	// pada fungsi ini terjadi pengolahan kata sehingga menghasilkan kata : Mobil BMW berwarna Black
+func main() {
 
-	// 2 => fungsi yang menampilkan hasil dari kembalian string
-	// fungsi ini hanya bertugas untuk menampilkan kata
+	car := map[string]string{
+		"name":  "BMW",
+		"color": "Black",
+	}
 
-	// alur
-	// simpan hasil dari return function kedalam sebuah variable message
-	// tampilkan hasil dari variable message
+	//menampilkan hasil cara 1
+	message := carInfo(car)
+	fmt.Println(message)
 
-	// output => Mobil BMW berwarna Black
+	//menampilkan hasil cara 2
+	message1 := carInfo1()
+	fmt.Println(message1)
 
 }

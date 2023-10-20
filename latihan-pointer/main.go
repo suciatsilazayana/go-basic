@@ -1,21 +1,27 @@
 package main
 
+import "fmt"
+
+type Student struct {
+	Name string
+}
+
+func (s *Student) setMyName(newname string) {
+	s.Name = newname
+}
+
+func (s *Student) callMyName() {
+	fmt.Println("Hello, my name is", s.Name)
+}
+
 func main() {
-
-	// Pointer pada method
-	type Student struct {
-		Name  string
-		Class string
+	student := Student{
+		Name: "Suci",
 	}
 
-	func (s *Student) setMyName(newName string) {
-		fmt.Println("Try to change from", s.Name, "name to =>", newName)
-		s.Name = newName
-	}
+	//memanggil method setmyname
+	student.setMyName("Noobee")
 
-	func (s *Student) CallMyName(newName string) {
-		fmt.Println("Try to change from", c.Name, "name to =>", newName)
-		c.Name = newName
-		// fmt.Println("di dalam fungsi changeName2", c.Name)
-	}
+	//memanggil method callmyname
+	student.callMyName()
 }
